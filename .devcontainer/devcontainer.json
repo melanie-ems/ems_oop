@@ -1,0 +1,25 @@
+{
+  "name": "A-Level CS OOP (C++)",
+  "image": "mcr.microsoft.com/devcontainers/cpp:1-ubuntu-22.04",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.cpptools",
+        "ms-vscode.cpptools-themes",
+        "formulahendry.code-runner",
+        "streetsidesoftware.code-spell-checker"
+      ],
+      "settings": {
+        "editor.fontSize": 14,
+        "editor.tabSize": 4,
+        "editor.formatOnSave": true,
+        "code-runner.runInTerminal": true,
+        "code-runner.saveFileBeforeRun": true,
+        "C_Cpp.clang_format_fallbackStyle": "Google"
+      }
+    }
+  },
+
+  "postCreateCommand": "g++ --version && echo 'C++ environment ready!'"
+}
