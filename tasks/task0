@@ -1,0 +1,80 @@
+# Task 1 — Classes & Encapsulation
+
+## Learning objectives
+- Define a class with private attributes and public methods
+- Write a constructor to initialise an object
+- Use getter and setter methods to access and modify attributes
+- Understand *why* we make attributes private (encapsulation)
+
+---
+
+## Background
+
+Open `point.cpp` and read through it carefully before starting.
+
+Notice:
+- Attributes (`x`, `y`) are **private** — nothing outside the class can touch them directly
+- The **constructor** runs automatically when an object is created
+- **Getters** let you *read* private data safely
+- **Setters** let you *change* private data — and can include validation (see `setAge`)
+
+To compile and run:
+```
+g++ animal.cpp -o animal
+./animal
+```
+
+---
+
+## Tasks
+
+### Task 1.1 — Extend the Animal class
+Add a private attribute `string species` to the Animal class.
+- Update the constructor to accept and store a species
+- Write a getter `getSpecies()`
+- Update `describe()` to also print the species
+- Test it in `main()`
+
+### Task 1.2 — Validation in a setter
+Add a setter `setName(string newName)` that:
+- Rejects empty strings (i.e. does nothing if `newName == ""`)
+- Otherwise updates the name
+- Test it in `main()` with both a valid and an empty string
+
+### Task 1.3 — New class from scratch
+Create a new file `book.cpp` and define a `Book` class with:
+- Private attributes: `title` (string), `author` (string), `pages` (int)
+- A constructor
+- Getters for all three attributes
+- A setter for `pages` that rejects values below 1
+- A method `summary()` that prints all details neatly
+- A `main()` that creates at least two Book objects and tests all methods
+
+### Stretch — Why does encapsulation matter?
+In `animal.cpp`, what would go wrong if `age` were public and any code could write `dog.age = -10`?
+Write your answer as a comment at the bottom of the file.
+
+---
+
+## AQA pseudocode reference
+Compare your C++ with how AQA would express the same class:
+
+```
+class Animal
+    private name
+    private sound
+    private age
+
+    public procedure new(givenName, givenSound, givenAge)
+        name ← givenName
+        sound ← givenSound
+        age ← givenAge
+    endprocedure
+
+    public function getName()
+        return name
+    endfunction
+endclass
+```
+
+The concepts are identical — only the syntax differs.
