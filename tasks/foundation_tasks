@@ -1,0 +1,6 @@
+# Foundation Tasks
+
+Modify main.cpp in an attempt get to know the syntax, for example by leaving out a semicolon or by adding additional braces.
+When do the changes cause an error, when do the additions not cause an error?
+
+C++ offers a number of data structure, apart from classes. Find out what these are and build some data structures of Points within main.cpp
